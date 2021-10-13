@@ -11,7 +11,8 @@ class Card:
         self.email = email
 
     def __str__(self):
-        return f"Name: {self.name}, Surname: {self.surname}, Company name: {self.company_name}, Occupation: {self.occupation}, E-mail address: {self.email}"
+        return f"Name: {self.name}, Surname: {self.surname}, Company name: {self.company_name}, " \
+               f"Occupation: {self.occupation}, E-mail address: {self.email}"
 
 
 name_cards = []
