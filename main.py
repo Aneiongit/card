@@ -21,18 +21,27 @@ class Card:
         return f'{len(self.name)} {len(self.surname)}'
 
 
-c1 = Card(name=f.first_name(), surname=f.last_name(), company_name=f.company(), occupation=f.job(), email=f.email())
-c2 = Card(name=f.first_name(), surname=f.last_name(), company_name=f.company(), occupation=f.job(), email=f.email())
-c3 = Card(name=f.first_name(), surname=f.last_name(), company_name=f.company(), occupation=f.job(), email=f.email())
-c4 = Card(name=f.first_name(), surname=f.last_name(), company_name=f.company(), occupation=f.job(), email=f.email())
-c5 = Card(name=f.first_name(), surname=f.last_name(), company_name=f.company(), occupation=f.job(), email=f.email())
+cards = []
+for i in range(5):
+    cards.append(Card(f.first_name(), f.last_name(), f.company(), f.job(), f.email()))
+    print(cards[i])
 
-cards = [c1, c2, c3, c4, c5]
-
+print()
 by_name = sorted(cards, key=lambda card: card.name)
-by_surname = sorted(cards, key=lambda card: card.surname)
-by_email = sorted(cards, key=lambda card: card.email)
+for i in range(5):
+    print(by_name[i])
 
+print()
+by_surname = sorted(cards, key=lambda card: card.surname)
+for i in range(5):
+    print(by_surname[i])
+
+print()
+by_email = sorted(cards, key=lambda card: card.email)
+for i in range(5):
+    print(by_email[i])
+
+print()
 for card in cards:
     print(card)
     print(card.contact())
