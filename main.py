@@ -28,22 +28,21 @@ for i in range(5):
 
 print()
 by_name = sorted(cards, key=lambda card: card.name)
-for i in range(5):
-    print(by_name[i])
+for card in by_name:
+    print(card)
 
 print()
 by_surname = sorted(cards, key=lambda card: card.surname)
-for i in range(5):
-    print(by_surname[i])
+for card in by_name:
+    print(card)
 
 print()
 by_email = sorted(cards, key=lambda card: card.email)
-for i in range(5):
-    print(by_email[i])
+for card in by_name:
+    print(card)
 
 print()
 for card in cards:
     print(card)
     print(card.contact())
     print(card.len)
-
