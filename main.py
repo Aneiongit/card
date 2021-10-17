@@ -11,11 +11,29 @@ class Card:
         self.email = email
 
     def __str__(self):
-        return f"Name: {self.name}, Surname: {self.surname}, Company name: {self.company_name}, " \
-               f"Occupation: {self.occupation}, E-mail address: {self.email}"
+        return f"Name: {self.name}, Surname: {self.surname}, E-mail address: {self.email}"
 
 
 name_cards = []
 for i in range(5):
     name_cards.append(Card(f.first_name(), f.last_name(), f.company(), f.job(), f.email()))
     print(name_cards[i])
+
+print()
+for i in range(5):
+    name_cards.append(Card(f.first_name(), f.last_name(), f.company(), f.job(), f.email()))
+    sorted_by_first_name = sorted(name_cards, key=lambda card: card.name)
+    print(sorted_by_first_name[i])
+print()
+
+for i in range(5):
+    name_cards.append(Card(f.first_name(), f.last_name(), f.company(), f.job(), f.email()))
+    sorted_by_surname = sorted(name_cards, key=lambda card: card.surname)
+    print(sorted_by_surname[i])
+print()
+
+for i in range(5):
+    name_cards.append(Card(f.first_name(), f.last_name(), f.company(), f.job(), f.email()))
+    sorted_by_email = sorted(name_cards, key=lambda card: card.email)
+    print(sorted_by_email[i])
+print()
