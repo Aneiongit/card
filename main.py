@@ -1,4 +1,5 @@
 from faker import Faker
+
 f = Faker()
 
 
@@ -26,20 +27,16 @@ for i in range(5):
     cards.append(Card(f.first_name(), f.last_name(), f.company(), f.job(), f.email()))
     print(cards[i])
 
-print()
-by_name = sorted(cards, key=lambda card: card.name)
-for card in by_name:
-    print(card)
 
-print()
-by_surname = sorted(cards, key=lambda card: card.surname)
-for card in by_name:
-    print(card)
+def print_by_order(cards, func):
+    ordered_cards = sorted(cards, key=func)
+    for element in ordered_cards:
+        print(element)
 
-print()
-by_email = sorted(cards, key=lambda card: card.email)
-for card in by_name:
-    print(card)
+
+print_by_order(cards, lambda x: x.name)
+print_by_order(cards, lambda x: x.surname)
+print_by_order(cards, lambda x: x.email)
 
 print()
 for card in cards:
