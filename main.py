@@ -28,7 +28,6 @@ for i in range(5):
     print(cards[i])
 
 
-
 def print_by_order(cards, func):
     ordered_cards = sorted(cards, key=func)
     for element in ordered_cards:
