@@ -16,6 +16,9 @@ class BaseContact:
     def contact(self):
         return f'Wybieram numer {self.phone} i dzwonię do {self.name} {self.surname}.'
 
+    def name(self):
+        return f'Nazywam sie {self.name} {self.surname}.'
+
     @property
     def len(self):
         return f'{len(self.name)} {len(self.surname)}'
@@ -41,6 +44,7 @@ class BusinessContact(BaseContact):
 
 
 def create_contacts(type, cards):
+
     card = []
     if type == "base":
         for i in range(cards):
@@ -59,6 +63,5 @@ def create_contacts(type, cards):
 
 
 type = input("Podaj typ (base or business): ")
-cards = int(input("Podaj ilość: "))
+cards = int(input("Podaj ilość (liczba): "))
 print(create_contacts(type, cards))
-
